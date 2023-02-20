@@ -1,6 +1,6 @@
 {
     "development": {
-        "localBaseUrl": "https://ddc7-85-143-92-97.ngrok.io/",
+        "localBaseUrl": "https://atlassian.krimsit.ru/",
         "port": 5000,
         "errorTemplate": true,
         "store": {
