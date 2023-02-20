@@ -1,0 +1,25 @@
+{
+    "development": {
+        "localBaseUrl": "https://ddc7-85-143-92-97.ngrok.io/",
+        "port": 5000,
+        "errorTemplate": true,
+        "store": {
+            "adapter": "sequelize",
+            "dialect": "sqlite3",
+            "logging": false,
+            "type": "memory"
+        }
+    },
+    "production": {
+        "port": "$PORT",
+        "errorTemplate": true,
+        "localBaseUrl": "https://atlassian-todo.herokuapp.com/",
+        "whitelist": [
+            "*.jira-dev.com",
+            "*.atlassian.net",
+            "*.atlassian.com",
+            "*.jira.com"
+        ]
+    },
+    "product": "jira"
+}

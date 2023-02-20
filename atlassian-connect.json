@@ -1,0 +1,44 @@
+{
+    "key": "teamlead_todo",
+    "name": "Teamlead TodoList",
+    "description": "ToDo List for Atlassian products",
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "apiMigrations":{
+        "signed-install": true
+    },
+    "modules": {
+        "generalPages": [
+            {
+                "key": "todo-page-jira",
+                "location": "system.top.navigation.bar",
+                "name": {
+                    "value": "Teamlead TodoList"
+                },
+                "url": "/todo",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            },
+            {
+                "key": "todo-confluence",
+                "location": "system.header/left",
+                "name": {
+                    "value": "Teamlead TodoList"
+                },
+                "url": "/todo",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            }
+        ]
+    }
+}
